@@ -2,7 +2,11 @@ import Messages from './Messages';
 import {useRef, useEffect, useContext} from 'react'
 import { FirebaseContext, didUpdate } from './Firebase';
 
-
+/**
+ * Компонент
+ * 
+ * @returns jsx
+ */
 function ChatWindow() {
     const { setMessages } = useContext(FirebaseContext);
 
@@ -13,7 +17,6 @@ function ChatWindow() {
     return (
         <div className="chat-window">
             <Messages />
-            {/* <span ref={lastEl}></span> */}
         </div>
     )
 }

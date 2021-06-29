@@ -1,6 +1,12 @@
 import { useContext, useEffect, useRef } from "react"
 import { FirebaseContext } from "./Firebase"
 
+/**
+ * функция для отрисовки сообщения
+ * 
+ * @param {object} message сообщение
+ * @returns jsx-сообщение
+ */
 const mapMsgs = (message) => {
     return (
         <div className="message" key={message.id}>
@@ -11,6 +17,12 @@ const mapMsgs = (message) => {
         </div>
     )
 }
+
+/**
+ * Компонент, отрисовывает список сообщений
+ * 
+ * @returns jsx
+ */
 
 function Messages () {
     const { messages } = useContext(FirebaseContext)

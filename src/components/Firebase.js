@@ -14,6 +14,11 @@ const firebaseConfig = {
 
 const FirebaseContext = React.createContext(null);
 
+/**
+ * слушатель события 
+ * @param function функция, сохраняющая состояние ui с бэкенда
+ */
+
 async function didUpdate (setMsgs) {
     var messagesRef = firebase.database().ref('messages').limitToLast(50);
     messagesRef.on('value', (snapshot) => {
@@ -21,6 +26,14 @@ async function didUpdate (setMsgs) {
         setMsgs(data);
     });
 }
+
+/**
+ * функция создает объект сообщения и пушит в firebase
+ * 
+ * @param {string} name имя отправителя 
+ * @param {string} text текст сообщения
+ * @returns 
+ */
 
 const sendMessage = async (name, text) => {
     if (text === '' || name === '') return;
@@ -38,6 +51,10 @@ const sendMessage = async (name, text) => {
     return firebase.database().ref('messages').update(updates);
 }
 
+/** 
+ * @constructor
+ * @returns {Object} объект с состоянием
+ */
 function Firebase() {
     const [name, setName] = useState('anonimus')
     const [text, setText] = useState('')
