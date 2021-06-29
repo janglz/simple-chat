@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react/cjs/react.development";
+import { useContext, useEffect, useRef } from "react";
 import { FirebaseContext } from './Firebase';
 
 function SendMessageForm() {
