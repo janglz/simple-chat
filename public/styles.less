@@ -1,0 +1,117 @@
+@color-darkgrey: #686b86;
+@color-dark: #4e5064;
+@color-lightgrey: #e1e2e9;
+
+.App {
+    // display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 600px;
+    background: @color-darkgrey;
+    color: white;
+    // align-self: center;
+    // align-content: center;
+    min-height: 100vh;
+}
+
+.messages-container, .chat-window {
+    height: 80vh;
+    // margin: 10vh 0;
+    overflow-y: scroll;
+    align-items:flex-start;
+    // border: 1px solid #e1e2e9;
+}
+
+.btn {
+    color:@color-darkgrey;
+    border: none;
+    transition: all 0.5s linear;
+    &.round {
+        display: block;
+        padding: 10px;
+        border-radius: 50%;
+        line-height: 0px;
+        width: 40px;
+        height: 40px;
+    }
+
+    &:hover {
+        background: @color-dark;
+        color:@color-lightgrey;
+        cursor: pointer;
+    }
+}
+
+.chat-window {
+    border-bottom: 2px solid @color-lightgrey;
+    .name, .text {
+        display: inline-flex;
+        margin-left: 10px;
+    }
+}
+
+.message {
+    display: flex; 
+    .name {
+        // border: 1px solid red;
+        // height: 
+        align-self: flex-end;
+        // transform: translateY(20px);
+    }
+}
+
+.text {
+    // align-self: baseline;
+    text-align: start;
+    max-width: 450px;
+    white-space: pre-line;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    background: @color-lightgrey;
+    border-radius: 15px 15px 15px 0;
+    color: black;
+    padding: 10px;
+}
+.time {
+    // width: 80px;
+    word-break: keep-all;
+    color:@color-darkgrey;
+    font-size: 12px;
+    padding-left: 5px;
+    font-weight: 600;
+}
+.form {
+    display: flex; 
+    flex-direction: column;
+    .form-group {
+        display: flex;
+        // border: 1px solid red;
+    }
+}
+.form-control {
+    width: 100%;
+    background: @color-darkgrey;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    &.name {
+        border-bottom: 2px solid @color-dark;
+    }
+    &:focus {
+        border: none;
+        // border-bottom: 2px solid @color-darkgrey;
+        outline: none;
+        background: @color-dark;
+    }
+    &:hover {
+        background-color: @color-dark;
+        // color: @color-dark;
+    }
+    &::placeholder {
+        color: @color-lightgrey;
+    }
+}
+
