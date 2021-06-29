@@ -3,11 +3,10 @@
 @color-lightgrey: #e1e2e9;
 
 .App {
-    // display: flex;
     margin: 0 auto;
     flex-direction: column;
     flex-wrap: nowrap;
-    width: 600px;
+    max-width: 600px;
     background: @color-darkgrey;
     color: white;
     // align-self: center;
@@ -17,10 +16,8 @@
 
 .messages-container, .chat-window {
     height: 80vh;
-    // margin: 10vh 0;
     overflow-y: scroll;
     align-items:flex-start;
-    // border: 1px solid #e1e2e9;
 }
 
 .btn {
@@ -30,6 +27,7 @@
     &.round {
         display: block;
         padding: 10px;
+        margin: 0 10px;
         border-radius: 50%;
         line-height: 0px;
         width: 40px;
@@ -54,15 +52,11 @@
 .message {
     display: flex; 
     .name {
-        // border: 1px solid red;
-        // height: 
         align-self: flex-end;
-        // transform: translateY(20px);
     }
 }
 
 .text {
-    // align-self: baseline;
     text-align: start;
     max-width: 450px;
     white-space: pre-line;
@@ -75,7 +69,6 @@
     padding: 10px;
 }
 .time {
-    // width: 80px;
     word-break: keep-all;
     color:@color-darkgrey;
     font-size: 12px;
@@ -87,7 +80,6 @@
     flex-direction: column;
     .form-group {
         display: flex;
-        // border: 1px solid red;
     }
 }
 .form-control {
@@ -101,8 +93,6 @@
         border-bottom: 2px solid @color-dark;
     }
     &:focus {
-        border: none;
-        // border-bottom: 2px solid @color-darkgrey;
         outline: none;
         background: @color-dark;
     }
