@@ -35,8 +35,8 @@ function Messages () {
     .current
     .scrollIntoView({ 
         behavior: "smooth",
-        block: "nearest",
-        inline: "start" 
+        block: "end",
+        inline: "nearest" 
     });
 
     useEffect(() => {

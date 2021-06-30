@@ -75,6 +75,7 @@
 }
 .form {
     display: flex; 
+    height: 20vh;
     flex-direction: column;
     .form-group {
         display: flex;
@@ -101,4 +102,24 @@
         color: @color-lightgrey;
     }
 }
+
+.href-container {
+    display: flex;
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    a { 
+        display: flex;
+        color: @color-lightgrey;
+        &:visited {
+            color: @color-lightgrey;
+        }
+        &:hover {
+            color: white;
+        }
+    }
+}
+
 

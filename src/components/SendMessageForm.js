@@ -51,6 +51,7 @@ function SendMessageForm() {
                         onChange={e => setName(e.target.value)}
                         required
                         autoComplete="off"
+                        maxlength = "20"
                     />
                 </div>
                 <div className="form-group">
@@ -64,6 +65,7 @@ function SendMessageForm() {
                         required
                         autoComplete="off"
                         placeholder="Напишите что-нибудь..."
+                        maxlength = "400"
                     />
                     <button
                     className="btn round"
@@ -72,7 +74,9 @@ function SendMessageForm() {
                 &#10148;
             </button>
                 </div>
-                
+                <div className="href-container">
+                    <a href="https://github.com/janglz/simple-chat">репозиторий</a>
+                </div>
             </div >
         }</FirebaseContext.Consumer>
     )

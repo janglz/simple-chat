@@ -37,7 +37,7 @@ async function didUpdate (setMsgs) {
 
 const sendMessage = async (name, text) => {
     if (text === '' || name === '') return;
-
+    // const newName = name.length > 20 ? name.slice(0, 20) + '...' : name;
     var newPostKey = await firebase.database().ref('messages').push().key;
     var postData = {
         name: name,
@@ -59,6 +59,7 @@ function Firebase() {
     const [name, setName] = useState('anonimus')
     const [text, setText] = useState('')
     const [messages, setMessages] = useState({})
+    const [errors, setErrors] = useState([])
 
     if (!firebase.apps.length) {
         firebase.initializeApp(firebaseConfig);
@@ -72,6 +73,7 @@ function Firebase() {
         messages: messages,
         setMessages: setMessages,
         sendMessage: sendMessage,
+        errors: errors,
     }
 }
 
