@@ -1,4 +1,3 @@
-import './App.css';
 import ChatWindow from './components/ChatWindow'
 import SendMessageForm from './components/SendMessageForm'
 import Firebase, { FirebaseContext } from './components/Firebase';
