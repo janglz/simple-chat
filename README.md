@@ -1,8 +1,6 @@
-# Простой чат 
+## Чат
 
-Сделано на React Hooks
+Простой чат на react, бэкенд - Google Firebase
 
-Запуск:
-
-### `npm start`
+### [Демо](https://test-chat-762a0.web.app/)
 
